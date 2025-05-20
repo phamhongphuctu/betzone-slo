@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
 const Pi = window.Pi;
-Pi.init({ version: "2.0", sandbox: true });
-
+if (Pi) {
+  Pi.init({ version: "2.0", sandbox: true });
+}
 const symbols = ["🍒", "🍋", "🔔", "🍊", "⭐", "💎"];
-
 function getRandomSymbol() {
   return symbols[Math.floor(Math.random() * symbols.length)];
 }
